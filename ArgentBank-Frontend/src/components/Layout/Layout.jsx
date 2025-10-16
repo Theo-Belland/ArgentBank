@@ -1,0 +1,31 @@
+import PropTypes from "prop-types";
+
+import Header from '../Header/Header';
+import Footer from '../Footer/Footer';
+
+import '../../style/main.css'
+
+/**
+ * Layout component - Structure commune à toutes les pages
+ * @param {Object} props
+ * @param {React.ReactNode} props.children - Contenu de la page
+ */
+
+
+function Layout ({children}) {
+    return (
+        <>
+            <Header />
+        
+                {children}
+          
+            <Footer />
+        </>
+    )
+}
+
+Layout.propTypes = {
+    children: PropTypes.node.isRequired
+}
+
+export default Layout
